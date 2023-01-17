@@ -60,3 +60,33 @@ function multiply2(first, second) {
     return first * second;
 }
 console.log(multiply2(6, 7));
+class Human {
+    constructor() {
+        this.name = "Branimir";
+    }
+}
+const human = new Human();
+human.name = "Someone else";
+class Human2 {
+    constructor() {
+        this.name = "Branimir";
+    }
+    setName() {
+        this.name = "Someone Else"; // ovo je ok
+    }
+}
+class Person extends Human {
+    setPersonName() {
+        this.name = "Someone else";
+    }
+}
+class Human3 {
+    constructor() {
+        this.name = "Branimir";
+    }
+    setName() {
+        this.name = "Someone Else"; // jedino ovo je ok, klasa koja nasledi Human ne moze primjeniti name property
+    }
+}
+const person3 = { name: "Branimir" };
+console.log(person3);

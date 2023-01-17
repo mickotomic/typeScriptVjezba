@@ -130,5 +130,6 @@ type peersonT = {
 	name: string;
 	age: number;
 }
-const person3: Partial<personT> = {name: "Branimir"};
+const person3: Partial<personT> = { name: "Branimir" };
+console.log(person3);
 
